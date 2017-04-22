@@ -8,7 +8,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
  * Created by ks on 2017/4/21.
  */
 @EnableRedisHttpSession
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = arrayOf("xyz.gosick.totoro"))
 class WebApplication
 
 fun main(args: Array<String>) {

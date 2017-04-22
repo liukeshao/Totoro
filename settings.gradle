@@ -1,4 +1,6 @@
 rootProject.name = 'Totoro'
 include 'totoro-web'
 include 'totoro-user'
+include 'totoro-user-api'
+include 'totoro-common'
 

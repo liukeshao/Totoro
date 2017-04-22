@@ -1,0 +1,7 @@
+dependencies {
+    compile project(":totoro-user-api")
+    compile "com.zaxxer:HikariCP:$hikaricpVersion"
+    compile "org.flywaydb:flyway-core:$flywayVersion"
+    compile "mysql:mysql-connector-java:$mysqlConnectorVersion"
+    compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:$mybatisBootVersion"
+}
