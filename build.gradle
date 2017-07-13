@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        kotlinVersion = '1.1.1'
+        kotlinVersion = '1.1.2'
         springBootVersion = '1.5.3.RELEASE'
     }
     repositories {
@@ -23,6 +23,8 @@ ext{
     pgjdbc = '42.0.0'
     hikaricpVersion = '2.6.1'
     mybatisBootVersion = '1.3.0'
+    kottlinLoggingVersion = '1.4.5'
+    jsoniterVersion = '0.9.15'
 }
 
 allprojects {
@@ -54,5 +56,6 @@ subprojects {
     dependencies {
         compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
         compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+        compile("io.github.microutils:kotlin-logging:${kottlinLoggingVersion}")
     }
 }
