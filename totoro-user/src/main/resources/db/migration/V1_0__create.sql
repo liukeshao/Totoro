@@ -10,17 +10,17 @@
 -- totoro 用户表
 -- 2017-04-22 初次创建
 CREATE TABLE IF NOT EXISTS `totoro_users` (
-  `id`              BIGINT        NOT NULL  AUTO_INCREMENT  COMMENT '自增主键',
-  `nickname`        VARCHAR(20)   NOT NULL                  COMMENT '用户名',
-  `display_name`    VARCHAR(32)       NULL                  COMMENT '用户的显示名',
-  `password`        VARCHAR(32)   NOT NULL                  COMMENT '密码',
-  `mobile`          VARCHAR(11)       NULL                  COMMENT '手机号',
-  `email`           VARCHAR(100)      NULL                  COMMENT '邮箱',
-  `type`            SMALLINT          NULL                  COMMENT '用户类型',
-  `status`          SMALLINT          NULL                  COMMENT '用户状态',
-  `out_id`          VARCHAR(32)       NULL                  COMMENT '关联的外部用户ID',
-  `out_type`        VARCHAR(32)       NULL                  COMMENT '用户来源',
-  `created_at`      DATETIME          NULL                  COMMENT '创建时间',
-  `updated_at`      DATETIME          NULL                  COMMENT '更新时间',
+  `id`              BIGINT        NOT NULL AUTO_INCREMENT  COMMENT '自增主键',
+  `nickname`        VARCHAR(20)   NOT NULL DEFAULT ''      COMMENT '用户名',
+  `display_name`    VARCHAR(32)   NOT NULL DEFAULT ''      COMMENT '用户的显示名',
+  `password`        VARCHAR(32)   NOT NULL DEFAULT ''      COMMENT '密码',
+  `mobile`          VARCHAR(11)   NOT NULL DEFAULT ''      COMMENT '手机号',
+  `email`           VARCHAR(100)  NOT NULL DEFAULT ''      COMMENT '邮箱',
+  `type`            SMALLINT      NOT NULL DEFAULT 0       COMMENT '用户类型',
+  `status`          SMALLINT      NOT NULL DEFAULT 0       COMMENT '用户状态',
+  `out_id`          VARCHAR(32)   NOT NULL DEFAULT ''      COMMENT '关联的外部用户ID',
+  `out_type`        VARCHAR(32)   NOT NULL DEFAULT ''      COMMENT '用户来源',
+  `created_at`      DATETIME      NOT NULL DEFAULT now()   COMMENT '创建时间',
+  `updated_at`      DATETIME      NOT NULL DEFAULT now()   COMMENT '更新时间',
   PRIMARY KEY (`id`)
 );
