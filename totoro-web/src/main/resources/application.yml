@@ -13,6 +13,5 @@ spring:
     port: 6379
 
 
-
 mybatis:
     type-aliases-package: xyz.gosick.totoro.user.model
