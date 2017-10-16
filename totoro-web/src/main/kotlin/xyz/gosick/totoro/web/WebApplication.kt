@@ -3,20 +3,22 @@ package xyz.gosick.totoro.web
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
-import org.springframework.session.MapSessionRepository
-import org.springframework.session.config.annotation.web.http.EnableSpringHttpSession
+import org.springframework.session.EnableSpringWebSession
+import org.springframework.session.MapReactorSessionRepository
+import org.springframework.session.Session
 import java.util.concurrent.ConcurrentHashMap
 
 
 /**
  * Created by ks on 2017/4/21.
  */
-@EnableSpringHttpSession
+@EnableSpringWebSession
 @SpringBootApplication(scanBasePackages = arrayOf("xyz.gosick.totoro"))
 class WebApplication {
     @Bean
-    fun sessionRepository(): MapSessionRepository {
-        return MapSessionRepository(ConcurrentHashMap())
+    fun reactorSessionRepository(): MapReactorSessionRepository {
+
+        return MapReactorSessionRepository(ConcurrentHashMap<String, Session>())
     }
 }
 
