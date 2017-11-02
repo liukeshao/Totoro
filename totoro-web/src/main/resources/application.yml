@@ -5,12 +5,15 @@ spring:
   application:
     name: totoro-web
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/totoro?autoReconnect=true&useSSL=false
-    username: root
+    url: jdbc:postgresql://localhost:5432/totoro
+    username: postgres
     password: lovelive
   redis:
     host: localhost
     port: 6379
+  flyway:
+    schemas: public
+    baseline-on-migrate: true
 
 
 mybatis:
