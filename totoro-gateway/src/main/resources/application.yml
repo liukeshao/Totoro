@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: totoro-gateway
+
+server:
+  port: 13000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka/
+
+zuul:
+  routes:
+    users:
+      path: /api/user/**
+      serviceId: totoro-user

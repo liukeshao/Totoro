@@ -1,0 +1,22 @@
+server:
+  port: 11000
+
+spring:
+  application:
+    name: totoro-user
+  datasource:
+    url: jdbc:postgresql://localhost:5432/totoro
+    username: postgres
+    password: lovelive
+  flyway:
+    schemas: public
+    baseline-on-migrate: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka/
+
+
+mybatis:
+    type-aliases-package: xyz.gosick.totoro.user.model
