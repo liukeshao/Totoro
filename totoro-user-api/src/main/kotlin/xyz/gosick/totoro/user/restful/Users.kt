@@ -1,9 +1,12 @@
 package xyz.gosick.totoro.user.restful
 
 import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.bind.annotation.RequestMapping
+import xyz.gosick.totoro.user.model.User
 
+@RequestMapping("/api/user")
 interface Users {
-    @GetMapping("/api/user")
-    fun findUserById(@RequestParam id: Long): String
+
+    @GetMapping("/{id}")
+    fun findUserById(id: Long): User
 }

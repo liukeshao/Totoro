@@ -1,9 +1,10 @@
 buildscript {
     ext {
         kotlinVersion = '1.1.51'
-        springBootVersion = '2.0.0.M5'
+        springBootVersion = '2.0.0.M6'
     }
     repositories {
+        mavenLocal()
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         jcenter()
         maven { url "https://repo.spring.io/snapshot" }
@@ -28,15 +29,18 @@ ext{
     kottlinLoggingVersion = '1.4.5'
     jsoniterVersion = '0.9.15'
     springCloudVersion = 'Finchley.M3'
+    ebeanVersion = '11.4.1'
 }
 
 allprojects {
 
     repositories {
+        mavenLocal()
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         jcenter()
         maven { url "https://repo.spring.io/snapshot" }
         maven { url 'https://repo.spring.io/libs-milestone' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/"}
     }
     group = 'xyz.gosick.totoro'
     version = '0.0.1-SNAPSHOT'

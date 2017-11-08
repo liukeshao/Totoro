@@ -3,6 +3,7 @@ package xyz.gosick.totoro.web.controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import xyz.gosick.totoro.user.model.User
 import xyz.gosick.totoro.web.service.UsersClient
 
 /**
@@ -13,7 +14,7 @@ import xyz.gosick.totoro.web.service.UsersClient
 class UserController(val usersClient: UsersClient) {
 
     @GetMapping("/test")
-    fun test(): String {
+    fun test(): User {
         return usersClient.findUserById(1L)
     }
 

@@ -3,6 +3,7 @@ package xyz.gosick.totoro.user.model
 import xyz.gosick.totoro.common.annotation.NoArg
 import java.util.*
 
+
 /**
  * Created by ks on 2017/4/22.
  */
@@ -15,10 +16,8 @@ data class User(var id: Long,
                 var email: String,
                 var type: Int,
                 var status: Int,
-                var outId: String,
-                var outType: String,
-                var createdAt: Date,
-                var updatedAt: Date) {
+                var createTime: Date,
+                var updateTime: Date) {
     enum class Status(val value: Int) {
         ACTIVE(1), LOCK(-1)
     }
