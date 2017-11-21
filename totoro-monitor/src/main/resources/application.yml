@@ -1,0 +1,15 @@
+server:
+  port: 14000
+spring:
+  application:
+    name: totoro-monitor
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka/
+turbine:
+  app-config: totoro-user
+  cluster-name-expression: new String('default')
+  combine-host-port: true
+

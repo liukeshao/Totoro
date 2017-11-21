@@ -11,16 +11,17 @@ spring:
   flyway:
     schemas: public
     baseline-on-migrate: true
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate.temp.use_jdbc_metadata_defaults: false
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/
+management:
+  cloudfoundry:
+    enabled: true
 
-mybatis:
-    type-aliases-package: xyz.gosick.totoro.user.model
-    mapper-locations: mapper/*Mapper.xml
-    configuration:
-        map-underscore-to-camel-case: true
-        default-fetch-size: 100
-        default-statement-timeout: 30
+
