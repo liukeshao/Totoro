@@ -3,4 +3,7 @@ include 'totoro-web'
 include 'totoro-user'
 include 'totoro-user-api'
 include 'totoro-common'
+include 'totoro-eureka'
+include 'totoro-gateway'
+include 'totoro-monitor'
 

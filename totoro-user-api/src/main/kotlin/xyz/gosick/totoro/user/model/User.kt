@@ -1,24 +1,24 @@
 package xyz.gosick.totoro.user.model
 
-import xyz.gosick.totoro.common.annotation.NoArg
 import java.util.*
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+import javax.persistence.Table
 
-/**
- * Created by ks on 2017/4/22.
- */
-@NoArg
-data class User(var id: Long,
-                var nickname: String,
-                var displayName: String,
-                var password: String,
-                var mobile: String,
-                var email: String,
-                var type: Int,
-                var status: Int,
-                var outId: String,
-                var outType: String,
-                var createdAt: Date,
-                var updatedAt: Date) {
+@Entity
+@Table(name="totoro_users")
+data class User(
+        @Id @GeneratedValue var id: Long,
+        var nickname: String,
+        var displayName: String,
+        var password: String,
+        var mobile: String,
+        var email: String,
+        var type: Int,
+        var status: Int,
+        var createTime: Date,
+        var updateTime: Date) {
     enum class Status(val value: Int) {
         ACTIVE(1), LOCK(-1)
     }
