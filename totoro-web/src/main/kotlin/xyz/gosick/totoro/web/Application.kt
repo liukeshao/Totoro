@@ -1,6 +1,6 @@
 package xyz.gosick.totoro.web
 
-import org.springframework.boot.SpringApplication
+import org.springframework.boot.runApplication
 import org.springframework.cloud.client.SpringCloudApplication
 import org.springframework.cloud.netflix.feign.EnableFeignClients
 
@@ -13,5 +13,5 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients
 class Application
 
 fun main(args: Array<String>) {
-    SpringApplication.run(Application::class.java, *args)
+    runApplication<Application>(*args)
 }
