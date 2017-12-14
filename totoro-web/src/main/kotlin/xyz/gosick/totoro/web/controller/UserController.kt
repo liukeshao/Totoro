@@ -13,9 +13,9 @@ import xyz.gosick.totoro.web.service.UsersClient
 @RequestMapping
 class UserController(val usersClient: UsersClient) {
 
-    @GetMapping("/test")
-    fun test(): UserDto {
-        return usersClient.findUserById(1L)
-    }
+//    @GetMapping("/test")
+//    fun test(): UserDto {
+//        return usersClient.findUserById(1L)
+//    }
 
 }

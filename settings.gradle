@@ -6,4 +6,5 @@ include 'totoro-common'
 include 'totoro-eureka'
 include 'totoro-gateway'
 include 'totoro-monitor'
+include 'totoro-config'
 

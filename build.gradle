@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        kotlinVersion = '1.2.0'
+        kotlinVersion = '1.2.10'
         springBootVersion = '2.0.0.M7'
     }
     repositories {
@@ -11,7 +11,7 @@ buildscript {
         maven { url 'https://repo.spring.io/libs-milestone' }
     }
     dependencies {
-        classpath "io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE"
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
         classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
@@ -29,8 +29,7 @@ ext {
     mybatisBootVersion = '1.3.0'
     kottlinLoggingVersion = '1.4.5'
     jsoniterVersion = '0.9.15'
-    springCloudVersion = 'Finchley.M4'
-    ebeanVersion = '11.4.1'
+    springCloudVersion = 'Finchley.M5'
 }
 
 allprojects {
@@ -53,6 +52,8 @@ subprojects {
     apply plugin: 'kotlin-spring'
     apply plugin: 'io.spring.dependency-management'
 
+    ext['kotlin.version'] = "${kotlinVersion}"
+
     noArg {
         annotation("xyz.gosick.totoro.common.annotation.NoArg")
     }
@@ -74,6 +75,7 @@ subprojects {
     dependencyManagement {
         imports {
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+            mavenBom "org.springframework.boot:spring-boot-dependencies:2.0.0.M7"
         }
     }
 }

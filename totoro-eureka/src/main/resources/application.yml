@@ -10,3 +10,10 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      expose: '*'
+    jmx:
+      expose: '*'

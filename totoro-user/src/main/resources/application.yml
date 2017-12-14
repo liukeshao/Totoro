@@ -20,8 +20,12 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/
+
 management:
-  cloudfoundry:
-    enabled: true
+  endpoints:
+    web:
+      expose: *
+    jmx:
+      expose: *
 
 
