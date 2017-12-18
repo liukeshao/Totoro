@@ -24,8 +24,8 @@ eureka:
 management:
   endpoints:
     web:
-      expose: *
+      expose: '*'
     jmx:
-      expose: *
+      expose: '*'
 
 
