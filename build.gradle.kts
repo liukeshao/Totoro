@@ -3,8 +3,8 @@ import org.gradle.kotlin.dsl.version
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    val springBootVersion = "2.0.0.RC1"
-    val junitPluginVersion = "1.0.2"
+    val springBootVersion = "2.0.0.RELEASE"
+    val junitPluginVersion = "1.1.0"
     project.extra.set("springBootVersion", springBootVersion)
 
     repositories {
@@ -20,7 +20,7 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.2.10"
+    val kotlinVersion = "1.2.21"
     val dependencyManagementVersion = "1.0.4.RELEASE"
     val dockerGradlePluginVersion = "0.17.2"
 
@@ -71,7 +71,7 @@ subprojects {
     configure<DependencyManagementExtension> {
         imports {
             val springBootVersion = parent!!.extra.get("springBootVersion")
-            val springCloudVersion = "Finchley.M5"
+            val springCloudVersion = "Finchley.M7"
             mavenBom("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion")
             mavenBom("org.springframework.boot:spring-boot-parent:$springBootVersion")
         }
